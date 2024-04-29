@@ -10,7 +10,13 @@ mailjet = Client(auth=(api_key, api_secret), version='v3.1')
 
 
 def send_email(recipient_email, recipient_name, image_path):
+    """Send an email with an attached image using Mailjet API
 
+    Args:
+        recipient_email (str): Email address of the recipient
+        recipient_name (str): Name of the recipient
+        image_path (str): Path to the image file to be attached
+    """
     # Open and read the image file in binary mode
     with open(image_path, 'rb') as image_file:
         image_data = image_file.read()
@@ -66,6 +72,7 @@ def send_email(recipient_email, recipient_name, image_path):
         ]
     }
 
+    # Send the email with Mailjet API
     result = mailjet.send.create(data=data)
     print(result.status_code)
     print(result.json())
