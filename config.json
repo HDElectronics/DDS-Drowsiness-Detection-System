@@ -1,0 +1,12 @@
+{
+    "email_settings": {
+        "recepient_email": "khadraouiibrahimpsn@gmail.com",
+        "recepient_name": "ibrahim khadraoui",
+        "email_sending_freq": 120
+    },
+    "alert_settings": {
+        "alarm_sound_path": "alarm_sound.wav",
+        "EYE_AR_THRESH": 0.21,
+        "EYE_AR_CONSEC_FRAMES": 13
+    }
+}
