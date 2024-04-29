@@ -3,3 +3,6 @@ myvenv/
 
 # Ignore everything in the captures directory
 captures/
+
+# Ignore voluminous files
+shape_predictor_68_face_landmarks.dat

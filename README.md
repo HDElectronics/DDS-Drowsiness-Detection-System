@@ -9,24 +9,39 @@ Before you begin, ensure you have Python installed on your system. You can downl
 ## Installation
 
 Clone the repository:
-   git clone https://your-repository-url.git
-   cd your-project-directory
+
+```console
+git clone https://your-repository-url.git
+cd your-project-directory
+```
 
 Create a virtual environment:
-   python -m venv myvenv
+```console
+python -m venv myvenv
+```
 
 Activate the virtual environment:
    On Windows:
-   .\myvenv\Scripts\activate
-   On MacOS/Linux:
-   source myvenv/bin/activate
+```console
+.\myvenv\Scripts\activate
+On MacOS/Linux:
+source myvenv/bin/activate
+```
 
 Install required packages:
-   pip install -r requirements.txt
+```console
+pip install -r requirements.txt
+```
+
+Download the shape_predictor_68_face_landmarks.dat
+```console
+wget http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2 && bzip2 -d shape_predictor_68_face_landmarks.dat.bz2
+```
 
 ## Configuration
 
 Edit the `config.json` file to set up the email settings and alert thresholds:
+```json
 {
   "email_settings": {
     "recepient_email": "example@example.com",
@@ -39,6 +54,7 @@ Edit the `config.json` file to set up the email settings and alert thresholds:
     "EYE_AR_CONSEC_FRAMES": 20
   }
 }
+```
 
 ## Running the System
 
