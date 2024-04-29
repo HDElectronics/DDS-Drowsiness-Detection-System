@@ -10,31 +10,31 @@ Before you begin, ensure you have Python installed on your system. You can downl
 
 Clone the repository:
 
-```console
+```bash
 git clone https://your-repository-url.git
 cd your-project-directory
 ```
 
 Create a virtual environment:
-```console
+```bash
 python -m venv myvenv
 ```
 
 Activate the virtual environment:
    On Windows:
-```console
+```bash
 .\myvenv\Scripts\activate
 On MacOS/Linux:
 source myvenv/bin/activate
 ```
 
 Install required packages:
-```console
+```bash
 pip install -r requirements.txt
 ```
 
 Download the shape_predictor_68_face_landmarks.dat
-```console
+```bash
 wget http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2 && bzip2 -d shape_predictor_68_face_landmarks.dat.bz2
 ```
 
