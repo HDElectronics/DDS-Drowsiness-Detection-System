@@ -4,8 +4,8 @@ import os
 from datetime import datetime
 
 # Use your Mailjet keys
-api_key = 'a8562b6b2995da46fff0cc214c7b324c'
-api_secret = 'cba2c35f475fbecb25c92e2d7cd51c71'
+api_key = '1996f1617faf7849d490425e91ad09ef'
+api_secret = 'e8280c06483e5332e27f425d93720748'
 mailjet = Client(auth=(api_key, api_secret), version='v3.1')
 
 
@@ -49,7 +49,7 @@ def send_email(recipient_email, recipient_name, image_path):
         'Messages': [
             {
                 "From": {
-                    "Email": "khadraouiibrahim@gmail.com",
+                    "Email": "khadraoui.nada25@gmail.com",
                     "Name": "DDS - Drowsiness Detection System"
                 },
                 "To": [

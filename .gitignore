@@ -1,5 +1,6 @@
 # Ignore virtual environment folder
 myvenv/
+.myvenv/
 
 # Ignore everything in the captures directory
 captures/

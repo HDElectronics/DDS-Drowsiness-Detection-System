@@ -67,7 +67,7 @@ detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
 
 # Start video capture
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture("/dev/video0")
 # Set a lower resolution for better performance
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
@@ -141,11 +141,11 @@ while True:
                         sent_email_time = time()
                         
                         # Send an email with the captured image
-                        EmailClient.send_email(recepient_email, recepient_name, )
+                        EmailClient.send_email(recepient_email, recepient_name, image_path)
                         print("Take capture and send email!")
 
                     # Play an alarm sound when drowsiness is detected
-                    afplay_process = subprocess.Popen(["afplay", alarm_sound_path])
+                    afplay_process = subprocess.Popen(["aplay", alarm_sound_path])
 
         else:
             # Reset the frame counter and drowsy flag if the eyes are open
